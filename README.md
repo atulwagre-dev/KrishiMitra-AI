@@ -24,10 +24,10 @@ Empowering every farmer with AI, anytime and anywhere.
 
 ## 👨‍💻 Developed By
 
-Tukaram
+Atul Wagre
 
 ## 🤝 Mentor
 
-KrushiMitra (AI Mentor)
+FarmerFamily(Father)
 
 ---
