@@ -3,10 +3,10 @@
 ## Primary User
 
 ### Name
-Ramesh Patil
+Laxman Wagre
 
 ### Age
-45 Years
+40 Years
 
 ### Occupation
 Farmer
@@ -15,7 +15,7 @@ Farmer
 Rural Maharashtra
 
 ### Education
-Basic School Education
+Secondary School
 
 ### Device
 Android Smartphone
@@ -25,13 +25,45 @@ Limited / Unstable
 
 ---
 
+# Farming Details
+
+### Main Crops
+- Soybean
+- Cotton
+- Wheat
+
+### Farming Experience
+18+ Years
+
+---
+
 # Pain Points
 
-- Unable to identify crop diseases early.
-- Agriculture experts are not always available.
-- Internet connectivity is poor.
-- Uses pesticides without proper guidance.
-- Crop loss reduces income.
+- Unable to identify crop diseases at an early stage.
+- Limited access to agriculture experts.
+- Poor internet connectivity in the village.
+- Confusion about which pesticide or treatment to use.
+- Crop loss affects family income.
+
+---
+
+# Goals
+
+- Detect crop diseases quickly.
+- Receive recommendations in Marathi.
+- Reduce unnecessary pesticide usage.
+- Increase crop productivity.
+- Save farming costs.
+
+---
+
+# How KrishiMitra AI Helps
+
+- Detects crop diseases using AI.
+- Provides easy-to-understand disease information.
+- Suggests sustainable treatment methods.
+- Offers Marathi advisory for better understanding.
+- Future support for offline mode and IoT integration.
 
 ---
 
