@@ -3,102 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KrishiMitra AI</title>
+    <title>KrishiMitra AI Dashboard</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <script src="{{ url_for('static', filename='js/language.js') }}"></script>
+
+    <script>
+console.log(translations);</script>
 </head>
 
 <body class="bg-light">
 
 <div class="container py-4">
 
-    <h2 class="text-center text-success fw-bold">
+    <h2 class="text-center text-success fw-bold" id="title">
         🌾 KrishiMitra AI
     </h2>
 
-    <p class="text-center text-muted">
-        Smart Farming Assistant
+    <p class="text-center text-muted" id="dashboard">
+        Smart Farming Dashboard
     </p>
 
-    <div class="row g-3 mt-3">
+    <div class="row g-3 mt-4">
 
+        <!-- Crop Selection -->
         <div class="col-md-4 col-6">
-            <div class="card shadow text-center p-3">
-                🌱<br><b>Crop Selection</b>
+            <a href="/crop" class="text-decoration-none text-dark">
+                <div class="card shadow text-center p-3 h-100">
+                    🌱<br>
+                    <b id="crop">Crop Selection</b>
+                </div>
+            </a>
+        </div>
+
+        <!-- Detect Disease -->
+        <div class="col-md-4 col-6">
+            <div class="card shadow text-center p-3 h-100">
+                📷<br>
+                <b id="detect">Detect Disease</b>
             </div>
         </div>
 
+        <!-- Temperature -->
         <div class="col-md-4 col-6">
-            <div class="card shadow text-center p-3">
-                📷<br><b>Detect Disease</b>
+            <div class="card shadow text-center p-3 h-100">
+                🌡️<br>
+                <b id="temperature">Temperature</b>
             </div>
         </div>
 
+        <!-- Soil Check -->
         <div class="col-md-4 col-6">
-            <div class="card shadow text-center p-3">
-                🌡️<br><b>Temperature</b>
+            <div class="card shadow text-center p-3 h-100">
+                🌾<br>
+                <b id="soil">Soil Check</b>
             </div>
         </div>
 
+        <!-- Fertilizer Calculator -->
         <div class="col-md-4 col-6">
-            <div class="card shadow text-center p-3">
-                🌾<br><b>Soil Check</b>
+            <div class="card shadow text-center p-3 h-100">
+                🧮<br>
+                <b id="fertilizer">Fertilizer Calculator</b>
             </div>
         </div>
 
+        <!-- AI Assistant -->
         <div class="col-md-4 col-6">
-            <div class="card shadow text-center p-3">
-                🧮<br><b>Fertilizer Calculator</b>
+            <div class="card shadow text-center p-3 h-100">
+                🤖<br>
+                <b id="assistant">AI Assistant</b>
             </div>
         </div>
 
+        <!-- Fertilizer Scheduler -->
         <div class="col-md-4 col-6">
-            <div class="card shadow text-center p-3">
-                🤖<br><b>AI Assistant</b>
+            <div class="card shadow text-center p-3 h-100">
+                📅<br>
+                <b id="scheduler">Fertilizer Scheduler</b>
             </div>
         </div>
 
+        <!-- Weather Alerts -->
         <div class="col-md-4 col-6">
-            <div class="card shadow text-center p-3">
-                📅<br><b>Scheduler</b>
+            <div class="card shadow text-center p-3 h-100">
+                🌦️<br>
+                <b id="weather">Weather Alerts</b>
             </div>
         </div>
 
+        <!-- Krishi Kendra -->
         <div class="col-md-4 col-6">
-            <div class="card shadow text-center p-3">
-                🌦️<br><b>Weather</b>
+            <div class="card shadow text-center p-3 h-100">
+                📍<br>
+                <b id="krishi">Krishi Kendra</b>
             </div>
         </div>
 
+        <!-- Offline AI -->
         <div class="col-md-4 col-6">
-            <div class="card shadow text-center p-3">
-                📍<br><b>Krishi Kendra</b>
+            <div class="card shadow text-center p-3 h-100">
+                📴<br>
+                <b id="offline">Offline AI</b>
             </div>
         </div>
 
+        <!-- Feedback -->
         <div class="col-md-4 col-6">
-            <div class="card shadow text-center p-3">
-                📴<br><b>Offline AI</b>
+            <div class="card shadow text-center p-3 h-100">
+                💬<br>
+                <b id="feedback">Feedback</b>
             </div>
         </div>
 
+        <!-- Help -->
         <div class="col-md-4 col-6">
-            <div class="card shadow text-center p-3">
-                💬<br><b>Feedback</b>
-            </div>
-        </div>
-
-        <div class="col-md-4 col-6">
-            <div class="card shadow text-center p-3">
-                ❓<br><b>Help</b>
+            <div class="card shadow text-center p-3 h-100">
+                ❓<br>
+                <b id="help">Help</b>
             </div>
         </div>
 
     </div>
 
 </div>
+
+<script>
+
+const lang = localStorage.getItem("language") || "en";
+
+document.getElementById("title").innerHTML = translations[lang].title;
+document.getElementById("dashboard").innerHTML = translations[lang].dashboard;
+document.getElementById("crop").innerHTML = translations[lang].crop;
+document.getElementById("detect").innerHTML = translations[lang].detect;
+document.getElementById("temperature").innerHTML = translations[lang].temperature;
+document.getElementById("soil").innerHTML = translations[lang].soil;
+document.getElementById("fertilizer").innerHTML = translations[lang].fertilizer;
+document.getElementById("assistant").innerHTML = translations[lang].assistant;
+document.getElementById("scheduler").innerHTML = translations[lang].scheduler;
+document.getElementById("weather").innerHTML = translations[lang].weather;
+document.getElementById("krishi").innerHTML = translations[lang].krishi;
+document.getElementById("offline").innerHTML = translations[lang].offline;
+document.getElementById("feedback").innerHTML = translations[lang].feedback;
+document.getElementById("help").innerHTML = translations[lang].help;
+
+</script>
 
 </body>
 </html>

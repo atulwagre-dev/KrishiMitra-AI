@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Crop Selection</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/crop.css') }}">
+
+<script src="{{ url_for('static', filename='js/language.js') }}"></script>
+
+</head>
+
+<body>
+
+<div class="container py-4">
+
+    <!-- Header -->
+
+    <div class="header">
+
+        <button class="back-btn"
+        onclick="history.back()">
+
+        ⬅ Back
+
+        </button>
+
+        <h2 id="title">
+            🌾 Select Your Crop
+        </h2>
+
+    </div>
+
+    <!-- Progress -->
+
+    <div class="progress mt-3">
+
+        <div class="progress-bar bg-success"
+        style="width:40%;">
+
+        </div>
+
+    </div>
+
+    <p class="step">
+
+        Step 2 of 5
+
+    </p>
+
+    <!-- Crop Cards -->
+
+    <div class="row mt-4">
+
+        <div class="col-md-4">
+
+            <div class="crop-card"
+            onclick="selectCrop(this,'Tomato')">
+
+                🍅
+
+                <h4 id="tomato">
+
+                    Tomato
+
+                </h4>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="crop-card"
+            onclick="selectCrop(this,'Potato')">
+
+                🥔
+
+                <h4 id="potato">
+
+                    Potato
+
+                </h4>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="crop-card"
+            onclick="selectCrop(this,'Rice')">
+
+                🌾
+
+                <h4 id="rice">
+
+                    Rice
+
+                </h4>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4 mt-4">
+
+            <div class="crop-card"
+            onclick="selectCrop(this,'Wheat')">
+
+                🌿
+
+                <h4 id="wheat">
+
+                    Wheat
+
+                </h4>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4 mt-4">
+
+            <div class="crop-card"
+            onclick="selectCrop(this,'Cotton')">
+
+                ☁
+
+                <h4 id="cotton">
+
+                    Cotton
+
+                </h4>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4 mt-4">
+
+            <div class="crop-card"
+            onclick="selectCrop(this,'Soybean')">
+
+                🌱
+
+                <h4 id="soybean">
+
+                    Soybean
+
+                </h4>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="text-center mt-5">
+
+        <a href="/upload"
+        class="btn btn-success btn-lg"
+        id="continueBtn">
+
+        Continue →
+
+        </a>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/crop.js') }}"></script>
+
+</body>
+
+</html>

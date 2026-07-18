@@ -14,5 +14,9 @@ def language():
 def dashboard():
     return render_template("dashboard.html")
 
+@app.route("/crop")
+def crop():
+    return render_template("crop.html")
+
 if __name__ == "__main__":
     app.run(debug=True)

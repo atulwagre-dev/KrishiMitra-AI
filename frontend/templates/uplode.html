@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Upload Image</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/upload.css') }}">
+
+<script src="{{ url_for('static', filename='js/language.js') }}"></script>
+
+</head>
+
+<body>
+
+<div class="container py-4">
+
+    <!-- Header -->
+
+    <div class="header">
+
+        <button class="back-btn" onclick="history.back()">
+            ⬅ Back
+        </button>
+
+        <h2 id="title">
+            📷 Upload Crop Image
+        </h2>
+
+    </div>
+
+    <!-- Progress -->
+
+    <div class="progress mt-3">
+
+        <div class="progress-bar bg-success" style="width:60%">
+
+        </div>
+
+    </div>
+
+    <p class="step">
+
+        Step 3 of 5
+
+    </p>
+
+    <!-- Selected Crop -->
+
+    <div class="selected-crop">
+
+        <h4 id="selectedCropTitle">
+            Selected Crop
+        </h4>
+
+        <h3 id="selectedCropName">
+
+        </h3>
+
+    </div>
+
+    <!-- Upload -->
+
+    <div class="upload-box">
+
+        <img id="preview"
+        src="https://placehold.co/300x220?text=Upload+Image">
+
+        <input
+        type="file"
+        id="imageInput"
+        accept="image/*"
+        hidden>
+
+        <button
+        class="btn btn-success mt-4"
+        onclick="document.getElementById('imageInput').click()"
+        id="chooseBtn">
+
+        Choose Image
+
+        </button>
+
+    </div>
+
+    <div class="text-center mt-5">
+
+        <a href="/result"
+
+        class="btn btn-primary btn-lg"
+
+        id="analyzeBtn">
+
+        Analyze Crop
+
+        </a>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/upload.js') }}"></script>
+
+</body>
+
+</html>
