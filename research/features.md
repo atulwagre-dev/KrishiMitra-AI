@@ -11,11 +11,19 @@ KrishiMitra AI is an intelligent farming assistant designed to help farmers iden
 
 ## 🌐 Multi-Language Support
 
-- Marathi
-- Hindi
-- English
-- User-selected language is applied across the application.
-- AI recommendations are displayed in the selected language.
+🌐 Multilingual Support
+
+✔ English
+✔ Marathi
+✔ Hindi
+✔ Gujarati
+✔ Tamil
+✔ Telugu
+✔ Kannada
+
+• Entire application changes into the selected language.
+• Disease name, confidence, severity, treatment, weather alerts,
+  AI assistant, and recommendations are shown in the chosen language.
 
 ---
 
